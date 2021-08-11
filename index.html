@@ -14,6 +14,24 @@
             overflow-x: hidden;
         }
 
+
+        .btn1{
+            background: rgb(0, 140, 255);
+            color: white;
+            padding: 10;
+            width: 50px;
+            height: 50px;
+            border: 0px solid transparent;
+            border-radius: 50px;
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .btn1 i{
+            font-size: 1.5em;
+        }
+
 .items{
     display: inline-block;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -98,6 +116,8 @@ animation: animate 4s linear forwards;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     padding: 20px;
+    position: relative;
+    top: 200px;
 }
 
 .card{
@@ -220,40 +240,50 @@ animation: animate 4s linear forwards;
 }
 
 footer{
-    
+    position: relative;
+    top: 200px;
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-family: Ubuntu;
+    z-index: 2;
 }
+
+::-webkit-scrollbar{
+   background: white;
+}
+
 
     </style>
 </head>
-<body>
+<body class="bodybuilder">
+ 
+    <div class="section111">
 
-  <header>
-      <nav class="navbar">
-               <a href="/" class="items" >Home</a>
-               <a href="/about " class="items">About us</a>
-               <a href="/contact" class="items">Contact us</a>
-
-               <div class="sec3">
-                   <a href="/signin" class="items" class="leftfloater">Sign In</a>
-                   <a href="/signup" class="items" class="leftfloater">Sign Up</a>
-               </div>
-               
-               
-          
-      </nav>
-  </header>
-
-  <section>
-      <h2 class="Meffect">
-          Welcome To My <span> WebSite </span>
-      </h2>
-  </section>
+        <header>
+            <nav class="navbar">
+                     <a href="/" class="items" >Home</a>
+                     <a href="/about " class="items">About us</a>
+                     <a href="/contact" class="items">Contact us</a>
+      
+                     <div class="sec3">
+                         <a href="/signin" class="items" class="leftfloater">Sign In</a>
+                         <a href="/signup" class="items" class="leftfloater">Sign Up</a>
+                     </div>
+                     
+                     
+                
+            </nav>
+        </header>
+      
+        <section>
+            <h2 class="Meffect">
+                Welcome To My <span> WebSite </span>
+            </h2>
+        </section>
+    </div>             
   
   <section class="container">
 
@@ -296,11 +326,22 @@ footer{
         </div>
     </div>
 
-
+      
   </section>
-  <footer>
+  <footer class="footer1">
      <h3> Copyright &copy; spandan455.github.io </h3> 
   </footer>
+ 
   <script src="https://kit.fontawesome.com/e4e282d657.js" crossorigin="anonymous"></script>
+  <script>
+      var content = document.getElementsByClassName("btn1")
+
+      document.addEventListener("click" , ()=>{
+    document.body.requestFullscreen();
+    })
+
+
+      
+  </script>
 </body>
 </html>
